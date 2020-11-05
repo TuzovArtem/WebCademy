@@ -4,7 +4,7 @@
 }
 
 body{
-  background-color: #E5E5E5;
+  background-color: #f4f4f4;
   margin: 0;
   font-family: 'Roboto', sans-serif;
 }
@@ -22,13 +22,11 @@ body{
 
 .main{
   width: 870px;
-  background-color:rgb(141, 111, 111);
 }
 
 .sidebar{
   width: 271px;
-  height: 200px;
-  background-color: green;
+ 
 }
 
 .cards-holder{
@@ -161,4 +159,126 @@ background-color:#11BE75;
 }
 .btn-more:hover{
   background:#DFDFAA;
+}
+
+/* Sidebar */
+.widget + .widget{
+  margin-top: 30px;
+
+}
+.widget__title{
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.16;
+  color:#000;
+  position: relative;
+  margin-bottom: 20px;
+}
+.widget__title::after{
+  content:"";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top :0;
+  right: 0;
+  background-image:url("/assets/icons/chevron-up.svg");
+  background-repeat:no-repeat;
+  background-size: initial;
+  background-position:center ;
+
+}
+
+/* Location Buttons Group */
+
+.location__row{
+  display:flex;
+} 
+
+.location__row:first-child{
+border-radius: 4px 4px 0 0 ;
+overflow: hidden;
+border: 1px solid #d6d6d6;
+}
+
+.location__row:last-child{
+  border-radius:0 0  4px 4px ;
+  overflow: hidden;
+  border: 1px solid #d6d6d6;
+  border-top: none;
+}
+
+.location__btn{
+  border:none;
+  background-color:transparent ;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+  padding:0 15px ;
+  line-height: 50px;
+  
+  color: #3C3C3C;
+  height: 50px;
+  flex-grow: 1;
+
+  cursor: pointer;
+  transition: background-color 0.2s ease-in;
+}
+
+.location__btn:hover{
+  background-color:#ffd0268c;
+}
+
+
+.location__checkbox{
+  width: 1px;
+  height: 1px;
+  position: absolute;
+  opacity: 0;
+  appearance: none;
+}
+
+.location__checkbox:checked + .location__btn{
+  background-color:#ffcf26;
+}
+.location__checkbox:checked + .location__btn:hover{
+  background-color:#b38d03;
+}
+
+/* Radio */
+
+.radio{
+  
+}
+
+.radio__real{
+
+}
+.radio__fake{
+  position: relative;
+  display: inline-block;
+  width:20px;
+  height: 20px;
+  background-color:FFE074;
+  border: 1px solid #777777;
+  border-radius: 50%;
+}
+.radio__real:checked + .radio__fake::before {
+  content:"";
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:6px;
+  height: 6px;
+  border-radius:50%;
+  background-color:#3C3C3C;
+  transform: translate(-50%, -50%);
+}
+
+
+.radio__title{
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.18;
+  color:#000
 }
