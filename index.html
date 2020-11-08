@@ -9,6 +9,13 @@
   <title>Test</title>
 </head>
 <body>
+  <button class="hamburger-menu toogle-sidebar">
+      <input id="menu__toggle" type="checkbox" />
+      <label class="menu__btn" for="menu__toggle">
+        <span></span>
+      </label>
+  </button>
+
     <div class="container">
       <div class="row">
         <main class="main cards-holder">
@@ -207,7 +214,8 @@
           </button>
         </main>
         <aside class="sidebar">
-         
+        
+          <form>
          <!-- Widget -->
           <div class="widget">
 
@@ -239,7 +247,6 @@
              </div>
              </div>
           <!--// Widget --> 
-
           <!-- Widget -->
           <div class="widget">
 
@@ -276,7 +283,6 @@
             </div>
           </div>
           <!--// Widget --> 
-
           <!-- Widget -->
           <div class="widget">
 
@@ -342,7 +348,7 @@
             
             <div class ="widget__body">
               <label class="toogle">
-                <input type="toogle" class="toogle__real" name="" > 
+                <input type="checkbox" class="toogle__real" name="comission" checked> 
                 <span class="toogle__fake"></span>
                 <span class="toogle__title">Услуги 0%</span>
               </label>
@@ -350,14 +356,25 @@
 
            
             </div>
-
-          
+            <!--// Widget --> 
+            <!-- Widget --> 
+            <div class="widget">
+            
+              <div class ="widget__body">
+               <button class="form-btn form-btn--submit">Применить фильтры</button>
+               <button class="form-btn"> <img src="/assets/icons/x.svg" alt=""> Сбросить фильтры</button>
+              </div>
+  
+             
+              </div>
+            <!--// Widget --> 
+          </form>
         </aside>
       </div>
     </div>
 
 
 
-<script></script>
+<script src='/js/script.js'></script>
 </body>
 </html>
