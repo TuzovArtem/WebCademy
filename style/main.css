@@ -90,6 +90,8 @@ a.card-link{
   transition: all 0.2s ease-in;
 }
 
+
+
 a.card-link:hover{
   opacity: 0.8;
   transform: translateY(-5px);
@@ -179,6 +181,9 @@ background-color:#11BE75;
 
 }
 
+a.hidden-card{
+  display:none;
+}
 /* Button */
 
 .btn-more {
@@ -216,6 +221,7 @@ background-color:#11BE75;
   color:#000;
   position: relative;
   margin-bottom: 20px;
+  cursor: pointer;
 }
 .widget__title::after{
   content:"";
@@ -228,7 +234,14 @@ background-color:#11BE75;
   background-repeat:no-repeat;
   background-size: initial;
   background-position:center ;
+  
+}
+.widget__title--active::after{
+  transform: rotate(180deg);
+}
 
+.widget__body--hidden{
+  display: none;
 }
 
 /* Location Buttons Group */
@@ -389,6 +402,10 @@ margin-top: 15px;
 display: block;
 }
 
+.checkbox--hidden{
+  display: none;
+  }
+
  .checkbox{
   margin-top: 15px;
 }
@@ -419,7 +436,7 @@ display: none;
   line-height: 1.19;
   color: #4290C9;
   cursor: pointer;
-  transition: color 0.2s ease-in;
+  transition: color 0.3s ease-in;
 }
 .widget__show-hidden:hover{
   color: rgb(25, 91, 138);
@@ -541,6 +558,10 @@ background-color:#ffe173
   display: none;
   background-color:inherit;
   border:none;
+  position: fixed;
+  z-index: 1;
+  height: 1px;
+  width: 1px;
 }
 @media (max-width: 829px){
   .hamburger-menu{
@@ -643,4 +664,5 @@ background-color:#ffe173
 .menu__item:hover {
   background-color: #CFD8DC;
 }
-}
+
+
