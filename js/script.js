@@ -53,8 +53,24 @@ const showMoreWidgetButton = document.querySelector('.widget__show-hidden');
 const moreWidgets = document.querySelectorAll('.checkbox--hidden');
 
     showMoreWidgetButton.addEventListener('click', function(e){
-        console.log(e.target);
+        
+        e.preventDefault();
+        
+        if( e.target.dataset.options == 'hidden'){
         moreWidgets.forEach(function(item){
             item.classList.remove('checkbox--hidden');
+            
         })
+
+        showMoreWidgetButton.innerText = 'Скрыть дополнительные опции';
+        e.target.dataset.options = 'visible'
+    } else {
+        moreWidgets.forEach(function(item){
+            item.classList.add('checkbox--hidden');
+            
+        })
+        showMoreWidgetButton.innerText = 'Показать еще';
+        e.target.dataset.options = 'hidden';
+    
+    }
     })

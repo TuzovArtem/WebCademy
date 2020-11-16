@@ -666,3 +666,6 @@ background-color:#ffe173
 }
 
 
+.checkbox--hidden{
+  display: none;
+  }
